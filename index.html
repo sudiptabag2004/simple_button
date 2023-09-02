@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <body class="flex justify-center items-center h-screen">
+        <div class="text-center">
+            <h1 id="changeText" class="text-4xl font-bold">Hello World</h1>
+            <button id="myBtn" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Click Me</button>
+        </div>
+    
+    
+     
+    
+    
+    <script>
+        var button = document.getElementById("myBtn");
+        var text = document.getElementById("changeText");
+
+        var change = [
+            "Hello World",
+            "I am Tobi"
+
+        ];
+        var first = 0;
+
+        button.addEventListener("click",function(){
+            
+            first = (first+ 1) % change.length;
+            text.textContent = change[first];
+
+            
+        });
+        
+
+
+    </script>
+    
+    
+
+
+   
+</body>
+</html>
